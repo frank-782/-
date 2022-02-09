@@ -9,7 +9,7 @@ class MyExtension extends Extension {
         api.addCategory({
             categoryId: 'frank.websocket.category',
             messageId: 'frank.websocket.category',
-            color: '#66CCFF'
+            color: '#71AFD2'
         });
         api.addBlock({
             opcode: 'frank.websocket.onmessage',
@@ -76,7 +76,8 @@ class MyExtension extends Extension {
         if (this.wsClient) {
             this.wsClient.close();
             this.wsClient.removeEventListener('message', this._onmessage);
-        } 
+        }
+        api.removeCategory('frank.websocket.category');
     }
     onMessage(message) {
         if (!this.wsClient) return false;
@@ -87,8 +88,7 @@ class MyExtension extends Extension {
     }
     onMessageAny() {
         if (!this.wsClient) return false;
-        if (this.wsClient.isMessage) return true;
-        return false;
+        return this.wsClient.isMessage;
     }
     create(url) {
         if (this.wsClient) return;
@@ -129,12 +129,11 @@ class MyExtension extends Extension {
     }
     _onmessage(event) {
         console.log('收到消息：'+ event.data);
-        console.log(event)
         this.lastMessage = event.data;
         this.isMessage = true;
         setTimeout(() => {
             this.isMessage = false
-        }, 100)
+        }, 100);
 
     }
 }
