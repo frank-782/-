@@ -44,7 +44,7 @@ class MyExtension extends Extension {
             param: {
                 URL: {
                     type: type.ParameterType.STRING,
-                    default: 'ws://example.com'
+                    default: 'wss://www.example.com'
                 }
             },
             messageId: 'frank.websocket.create',
