@@ -1,0 +1,11 @@
+{
+    "frank.websocket.name": "WebSocket",
+    "frank.websocket.description": "连接世界！",
+    "frank.websocket.category": "WebSocket",
+    "frank.websocket.onmessage": "当接收到 [MESSAGE]",
+    "frank.websocket.onmessageany": "当接收到任意信息",
+    "frank.websocket.lastmessage": "获取接收内容",
+    "frank.websocket.create": "创建WebSocket连接 [URL]",
+    "frank.websocket.send": "发送信息 [MESSAGE]",
+    "frank.websocket.close": "关闭WebSocket连接"
+}
