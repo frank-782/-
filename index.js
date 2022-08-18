@@ -29,7 +29,14 @@ class MyExtension extends Extension {
             type: type.BlockType.HAT,
             messageId: 'frank.websocket.onmessageany',
             categoryId: 'frank.websocket.category',
-            function: () => this.onMessageAny()
+            function: () => !!this.onMessageAny()
+        });
+        api.addBlock({
+            opcode: 'frank.websocket.isconnect',
+            type: type.BlockType.BOOLEAN,
+            messageId: 'frank.websocket.isconnect',
+            categoryId: 'frank.websocket.category',
+            function: () => !!this.wsClient
         });
         api.addBlock({
             opcode: 'frank.websocket.lastmessage',

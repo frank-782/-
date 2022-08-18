@@ -5,6 +5,7 @@
     "frank.websocket.onmessage": "when receiving [MESSAGE]",
     "frank.websocket.onmessageany": "when receiving any message",
     "frank.websocket.lastmessage": "get receiving message",
+    "frank.websocket.isconnect": "Websocket is Connect?",
     "frank.websocket.create": "create WebSocket connection [URL]",
     "frank.websocket.send": "send message [MESSAGE]",
     "frank.websocket.close": "close WebSocket connection"

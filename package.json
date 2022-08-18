@@ -3,12 +3,12 @@
     "version": "1.0.0",
     "author": "frank_782",
     "scripts": {
-        "testserver": "websocketd --port=8090 node ./websocket.test.js",
+        "testserver": "websocketd --port=8090 --devconsole node ./websocket.test.js",
         "build": "rimraf ./build && mkdirp build && rimraf ./dist && mkdirp dist && webpack --bail",
         "build:dist": "NODE_ENV=production yarn run build"
     },
     "dependencies": {
-        "clipcc-extension": "^0.1.7"
+        "clipcc-extension": "^0.1.9"
     },
     "devDependencies": {
         "copy-webpack-plugin": "^10.2.4",
